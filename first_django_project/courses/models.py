@@ -12,4 +12,5 @@ class Course(models.Model):
     active = models.BooleanField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
-    
+    def __str__(self):
+        return self.subject
