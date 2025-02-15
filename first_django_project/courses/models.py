@@ -10,6 +10,7 @@ class Course(models.Model):
     created_date = models.DateTimeField(null=True)
     uploaded_date = models.DateTimeField(null=True)
     active = models.BooleanField()
+    image = models.ImageField(upload_to="courses/%Y/%m/", null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
     def __str__(self):
